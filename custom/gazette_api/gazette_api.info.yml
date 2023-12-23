@@ -1,0 +1,7 @@
+name: 'Gazette API Integration'
+type: module
+description: 'Integrates with The Gazette REST API to display notices.'
+core_version_requirement: ^8 || ^9
+package: Custom
+dependencies:
+  - views

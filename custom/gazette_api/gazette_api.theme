@@ -1,0 +1,18 @@
+
+<?php
+
+function theme_gazette_api_template($variables) {
+  $notices = $variables['notices'];
+
+  $output = '<div class="gazette-notices">';
+  foreach ($notices as $notice) {
+    $output .= '<div class="gazette-notice">';
+    $output .= '<h2><a href="' . $notice['url'] . '">' . $notice['title'] . '</a></h2>';
+    $output .= '<p class="publish-date">' . $notice['publish_date'] . '</p>';
+    $output .= '<div class="content">' . $notice['content'] . '</div>';
+    $output .= '</div>';
+  }
+  $output .= '</div>';
+
+  return $output;
+}
